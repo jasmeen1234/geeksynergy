@@ -1,0 +1,79 @@
+.company-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .movie-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .movie-card {
+    position: relative;
+  }
+  
+  .movie-image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-details-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .movie-details-overlay h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details-overlay .movie-info {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details-overlay button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .movie-details-overlay button:hover {
+    background-color: #0056b3;
+  }
+  
+  .movie-image-container:hover .movie-details-overlay {
+    opacity: 1;
+  }
+  
+  .movie-image-container:hover .movie-poster {
+    transform: scale(1.1);
+  }
+  

@@ -10,7 +10,7 @@ function App() {
   // "url('./components/assets/bg1.jpeg')"
   return (
     <>
-    <div className='text-white h-[100vh] flex justify-center items-center bg-cover'>
+    <div className='text-white h-[100vh] flex justify-center items-center bg-cover'  style={{ backgroundImage: "url('/bg.jpg')" }}>
     <Routes>
       <Route path='/login'element={<Login  setValidCredentials={setValidCredentials} />}/>
       <Route path='/' element={<Signup/>}/>

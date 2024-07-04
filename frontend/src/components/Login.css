@@ -1,0 +1,96 @@
+/* Login.css */
+.login-container {
+    background-image: url('./assets/bg.jpg');
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.login-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.login-input {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.login-input input {
+    width: 18rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #cbd5e0;
+    outline: none;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.login-input input:focus {
+    border-bottom-color: #3182ce;
+}
+
+.login-label {
+    position: absolute;
+    top: 0.375rem;
+    left: 0;
+    font-size: 0.875rem;
+    color: #ffffff;
+    transition: all 0.15s ease-in-out;
+    transform-origin: 0 0;
+    transform: translate(0, 0.375rem) scale(0.75);
+}
+
+.login-input input:focus ~ .login-label,
+.login-input input:not(:placeholder-shown) ~ .login-label {
+    transform: translate(0, -0.5rem) scale(0.75);
+    color: black;
+}
+
+.login-checkbox {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.login-checkbox input[type="checkbox"] {
+    margin: 0;
+}
+
+.login-forgot {
+    font-size: 0.875rem;
+    color: white;
+}
+
+.login-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    color: #1a202c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #2b6cb0;
+    color: #ffffff;
+}
+
+.login-create-account {
+    text-align: center;
+    margin-top: 1rem;
+    color: white;
+}

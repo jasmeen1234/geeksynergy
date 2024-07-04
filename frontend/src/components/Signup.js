@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { BiUser, AiOutlineUnlock } from 'react-icons/bi';
+
+import './Signup.css'; // Import your CSS file
 
 function Signup() {
     const [formData, setFormData] = useState({
@@ -58,89 +59,81 @@ function Signup() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen" style={{"background": "url('./bg.jpg')"}}>
-            <div className="bg-white border border-gray-300 rounded-md p-8 shadow-lg w-full max-w-2xl">
-                <h1 className="text-4xl font-bold text-center  bg-blue-600 mb-6 rounded-full">Signup</h1>
+        <div className="form-container bg-cover bg-center">
+            <div className="form-box">
+                <h1 className="form-title">Signup</h1>
                 <form onSubmit={handleSubmit}>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="text"
                             name="firstName"
                             value={formData.firstName}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder="First Name"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First Name</label>
-                        {errors.firstName && <span className="text-red-600">{errors.firstName}</span>}
+                        <label className="form-label">First Name</label>
+                        {errors.firstName && <span className="form-error">{errors.firstName}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="text"
-                           
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder="Last Name "
+                            placeholder="Last Name"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last Name</label>
-                        {errors.lastName && <span className="text-red-600">{errors.lastName}</span>}
+                        <label className="form-label">Last Name</label>
+                        {errors.lastName && <span className="form-error">{errors.lastName}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder="Enter Email Address "
+                            placeholder="Email"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
-                        {errors.email && <span className="text-red-600">{errors.email}</span>}
+                        <label className="form-label">Email</label>
+                        {errors.email && <span className="form-error">{errors.email}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="password"
                             name="password"
                             value={formData.password}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder="Password "
+                            placeholder="Password"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
-                        {errors.password && <span className="text-red-600">{errors.password}</span>}
+                        <label className="form-label">Password</label>
+                        {errors.password && <span className="form-error">{errors.password}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="password"
                             name="confirmPassword"
                             value={formData.confirmPassword}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" Confirm Password"
+                            placeholder="Confirm Password"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm Password</label>
-                        {errors.confirmPassword && <span className="text-red-600">{errors.confirmPassword}</span>}
+                        <label className="form-label">Confirm Password</label>
+                        {errors.confirmPassword && <span className="form-error">{errors.confirmPassword}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <input
                             type="text"
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder="Enter Phone Number"
+                            placeholder="Phone Number"
                         />
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone Number</label>
-                        {errors.phone && <span className="text-red-600">{errors.phone}</span>}
+                        <label className="form-label">Phone Number</label>
+                        {errors.phone && <span className="form-error">{errors.phone}</span>}
                     </div>
-                    <div className="relative my-4">
+                    <div className="form-input">
                         <select
                             name="profession"
                             value={formData.profession}
                             onChange={handleChange}
-                            className="block w-full py-2.5 px-0 text-sm text-gray-700 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         >
                             <option value="">Select Profession</option>
                             <option value="student">Student</option>
@@ -148,19 +141,19 @@ function Signup() {
                             <option value="doctor">Doctor</option>
                             <option value="teacher">Teacher</option>
                         </select>
-                        <label className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Profession</label>
-                        {errors.profession && <span className="text-red-600">{errors.profession}</span>}
+                        <label className="form-label">Profession</label>
+                        {errors.profession && <span className="form-error">{errors.profession}</span>}
                     </div>
-                    <div className="flex justify-between items-center my-4">
-                        <div className="flex gap-2 items-center">
-                            <input type="checkbox" name="rememberMe" id="rememberMe" />
-                            <label htmlFor="rememberMe" className="text-sm text-gray-700">Remember Me</label>
+                    <div className="form-actions">
+                        <div className="flex items-center">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" />
+                            <label htmlFor="rememberMe">Remember Me</label>
                         </div>
-                        <Link to="/forgot-password" className="text-sm text-blue-600">Forgot Password?</Link>
+                        <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
-                    <button type="submit" className="w-full text-lg mt-6 rounded-full bg-blue-600 text-white py-2 hover:bg-blue-800 transition-colors duration-300">Signup</button>
-                    <div className="text-center mt-4">
-                        <span>Already have an account? <Link to="/login" className="text-blue-600">Login</Link></span>
+                    <button type="submit" className="form-submit">Signup</button>
+                    <div className="form-login-link">
+                        <span>Already have an account? <Link to="/login">Login</Link></span>
                     </div>
                 </form>
             </div>
