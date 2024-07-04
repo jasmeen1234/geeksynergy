@@ -71,7 +71,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="First Name"
                         />
-                        <label className="form-label">First Name</label>
+                        {/* <label className="form-label">First Name</label> */}
                         {errors.firstName && <span className="form-error">{errors.firstName}</span>}
                     </div>
                     <div className="form-input">
@@ -82,7 +82,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="Last Name"
                         />
-                        <label className="form-label">Last Name</label>
+                        {/* <label className="form-label">Last Name</label> */}
                         {errors.lastName && <span className="form-error">{errors.lastName}</span>}
                     </div>
                     <div className="form-input">
@@ -93,7 +93,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="Email"
                         />
-                        <label className="form-label">Email</label>
+                        {/* <label className="form-label">Email</label> */}
                         {errors.email && <span className="form-error">{errors.email}</span>}
                     </div>
                     <div className="form-input">
@@ -104,7 +104,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="Password"
                         />
-                        <label className="form-label">Password</label>
+                        {/* <label className="form-label">Password</label> */}
                         {errors.password && <span className="form-error">{errors.password}</span>}
                     </div>
                     <div className="form-input">
@@ -115,7 +115,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="Confirm Password"
                         />
-                        <label className="form-label">Confirm Password</label>
+                        {/* <label className="form-label">Confirm Password</label> */}
                         {errors.confirmPassword && <span className="form-error">{errors.confirmPassword}</span>}
                     </div>
                     <div className="form-input">
@@ -126,7 +126,7 @@ function Signup() {
                             onChange={handleChange}
                             placeholder="Phone Number"
                         />
-                        <label className="form-label">Phone Number</label>
+                        {/* <label className="form-label">Phone Number</label> */}
                         {errors.phone && <span className="form-error">{errors.phone}</span>}
                     </div>
                     <div className="form-input">
@@ -141,7 +141,7 @@ function Signup() {
                             <option value="doctor">Doctor</option>
                             <option value="teacher">Teacher</option>
                         </select>
-                        <label className="form-label">Profession</label>
+                        {/* <label className="form-label">Profession</label> */}
                         {errors.profession && <span className="form-error">{errors.profession}</span>}
                     </div>
                     <div className="form-actions">

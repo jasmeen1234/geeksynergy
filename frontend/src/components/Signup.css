@@ -4,13 +4,14 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 25vw;
    
     background-size: cover;
     background-position: center;
 }
 
 .form-box {
-    background-color: #e11919;
+    background-color: rgb(72, 118, 118);
     border: 1px solid #ccc;
     border-radius: 0.375rem;
     padding: 1.5rem;
