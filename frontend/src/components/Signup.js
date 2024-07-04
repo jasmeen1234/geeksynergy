@@ -58,7 +58,7 @@ function Signup() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center min-h-screen" style={{"background": "url('./bg.jpg')"}}>
             <div className="bg-white border border-gray-300 rounded-md p-8 shadow-lg w-full max-w-2xl">
                 <h1 className="text-4xl font-bold text-center  bg-blue-600 mb-6 rounded-full">Signup</h1>
                 <form onSubmit={handleSubmit}>
